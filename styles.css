@@ -41,13 +41,13 @@ section {
 }
 
 .item:nth-child(2) {
-  transition-delay: 200ms;
+  transition-delay: 250ms;
 }
 
 .item:nth-child(3) {
-  transition-delay: 200ms;
+  transition-delay: 500ms;
 }
 
 .item:nth-child(4) {
-  transition-delay: 200ms;
+  transition-delay: 750ms;
 }
