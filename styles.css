@@ -1,0 +1,128 @@
+:root {
+  --homeBtn: #3b1910;
+}
+
+body {
+  margin: 0;
+}
+
+.homePage {
+  height: 100vh;
+  background-image: url("https://www.heddels.com/wp-content/uploads/2020/09/a-beginners-guide-to-leatherwork-image-via-euce.jpg");
+  background-size: 100%;
+
+}
+
+.topContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  color: white;
+  font-size: 200px;
+  margin: 0 0 0 20px;
+}
+
+.topBtns {
+  margin: 50px 40px 0 0;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: var(--homeBtn);
+  border-radius: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.blackBtn {
+  color: white; 
+  background-color: var(--homeBtn);
+  border: none; 
+  margin: 15px 0;
+}
+
+.homeText{
+  color: white;
+  position: absolute;
+  right: 60px;
+  top: 157px;
+  width: 450px;
+  height: 180px;
+  margin: 0 40px 0 auto;
+  font-size: 20px;
+}
+
+.homeScent {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+}
+
+@media screen and (max-width: 700px) {
+  .homePage { background-size: inherit; }
+  .name { font-size: 70px; }
+  .topBtns { margin: 17px 0 0 0; }
+  .circle { background-color: black; }
+  .blackBtn { background-color: black; }
+  .homeText {
+    right: 0;
+    width: 50%;
+  }
+}
+
+
+.productPage {
+  color: white;
+  height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  position: relative;
+}
+
+.productImgContainer {
+  margin-bottom: 40px;
+  position: relative;
+  top: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.productImg {
+  height: 270px; /* 16:9 * 30 */
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  /* border: 5px solid red; */
+}
+
+@media screen and (max-width: 700px) {
+
+}
+
+.customPage {
+  height: 100vh;
+  position: relative;
+}
+
+.customText {
+  border: 5px solid red;
+  /* position: absolute; */
+  width: 30%;
+}
+
+.infoPage {
+  height: 100vh;
+}
+
+.footer {
+  height: 30vh;
+}
