@@ -1,15 +1,17 @@
 body {
-  background-color: #131316;
   color : #ffffff;
   padding: 0;
   margin: 0;
 }
 
 section {
+  background-color: #131316;
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 110vh;
+  min-height: 101vh;
+  position: relative;
+  z-index: 1;
 }
 
 .hidden {
@@ -31,6 +33,22 @@ section {
   transform: translateX(0);
 }
 
+.paralax {
+  background-image: url("https://www.heddels.com/wp-content/uploads/2020/09/a-beginners-guide-to-leatherwork-image-via-euce.jpg");
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 0;
+}
+
+
 .items {
   display: flex;
 }
@@ -51,3 +69,4 @@ section {
 .item:nth-child(4) {
   transition-delay: 750ms;
 }
+
