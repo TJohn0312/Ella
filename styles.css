@@ -56,15 +56,14 @@ section {
 }
 
 .items {
-  display: flex;
-   flex-direction: column; 
-    align-items: center;
+  display: grid;
+  /* one column with width of 65vw */
+  grid-template-columns: 65vw;
 }
 
 .item {
     width: 65vw;
     height: auto;
-    /* transition-delay: 0ms; */
 }
 
 .featuredImg {
@@ -72,31 +71,35 @@ section {
     height: 65vw;
 }
 
-.featurturedText {
-  position: absolute;
+.featuredText {
+  margin-bottom: 35px;
 }
 
-.featurturedText .hidden{ 
+.featuredText .hidden{ 
   transition: all 4s;
-
 }
 /* .featurturedText:nth-child(n) { transition-delay: 150ms; } */
 
 @media screen and (min-width: 900px){
- .items { flex-direction: row; } 
+ .items { grid-template-columns: 20vw 20vw 20vw 20vw; gap: 2vw; } 
   .item {
     width:20vw;
-    margin: 0 2vw;
   }
 
-.item:nth-child(2) { transition-delay: 250ms; }
-.item:nth-child(3) { transition-delay: 500ms; }
-.item:nth-child(4) { transition-delay: 750ms; }
+.item:nth-child(3) { transition-delay: 250ms; }
+.item:nth-child(5) { transition-delay: 500ms; }
+.item:nth-child(7) { transition-delay: 750ms; }
   .featuredImg {
     width: 20vw;
     height: 20vw;
   }
-  .featurturedText {
-/* transition-delay: 0; */
+  .featuredText {
+    transition-delay: 500ms;
   }
+
+/* try to get this to work */
+  .featuredText:nth-child(2) { grid-area: 2 / 1; transition-delay:250ms; }
+  .featuredText:nth-child(4) { grid-area: 2 / 2; transition-delay:500ms; }
+  .featuredText:nth-child(6) { grid-area: 2 / 3; transition-delay:750ms; }
+  .featuredText:nth-child(8) { grid-area: 2 / 4; transition-delay:900ms; }
 }
