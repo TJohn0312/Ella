@@ -55,7 +55,7 @@ section:nth-child(1) { display: block; }
   z-index: 2;
   display: inline-block;
   object-position: top left;
-  height: 10%;
+  height: 25vh;
 }
 
 .homeText {
