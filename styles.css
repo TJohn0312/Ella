@@ -119,3 +119,23 @@ section:nth-child(1) { display: block; }
   .featuredText:nth-child(6) { grid-area: 2 / 3; transition-delay:750ms; }
   .featuredText:nth-child(8) { grid-area: 2 / 4; transition-delay:900ms; }
 }
+
+.contact {
+  grid-template-rows: 33.3vh 10vh 33.3vh;
+  align-content: center;
+}
+
+.contactInfo {
+grid-area: 1/1;
+}
+
+.commonQandA {
+grid-area: 3/1;
+}
+
+@media screen and (min-width: 900px) {
+  .contact { grid-template-columns: 33.3vw 33.3vw 33.3vw; grid-template-rows: 33.3vh 33.3vh 33.3vh; }
+  .contactInfo { margin-left:2vw; }
+  .commonQandA { grid-area: 2/3; }
+}
+
