@@ -14,6 +14,7 @@ section {
   position: relative;
   z-index: 1;
 }
+section:nth-child(1) { display: block; }
 
 .hidden {
   opacity: 0;
@@ -35,19 +36,34 @@ section {
 }
 
 .paralax {
-  background-image: url("https://www.heddels.com/wp-content/uploads/2020/09/a-beginners-guide-to-leatherwork-image-via-euce.jpg");
-  height: 100%;
+  background-image: url(Images/pose.jpeg);
+  background-color: #000000;
 
+  height: 100%;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center right 5%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .fixed {
   position: fixed;
   z-index: 0;
 }
+
+.logo {
+  position: fixed;
+  z-index: 2;
+  display: inline-block;
+  object-position: top left;
+  height: 10%;
+}
+
+.homeText {
+  top: 50vh;
+  left: 40vw;
+}
+
+
 
 
 
@@ -62,13 +78,13 @@ section {
 }
 
 .item {
-  width: 65vw;
-  height: auto;
+    width: 65vw;
+    height: auto;
 }
 
 .featuredImg {
-  width: 65vw;
-  height: 65vw;
+    width: 65vw;
+    height: 65vw;
 }
 
 .featuredText {
@@ -78,17 +94,26 @@ section {
 .featuredText .hidden{ 
   transition: all 4s;
 }
+/* .featurturedText:nth-child(n) { transition-delay: 150ms; } */
 
 @media screen and (min-width: 900px){
-  .items { grid-template-columns: 20vw 20vw 20vw 20vw; gap: 2vw; } 
-  .item { width:20vw; }
-  .featuredImg { width: 20vw; height: 20vw; }
-  .featuredText { transition-delay: 500ms; }
+ .items { grid-template-columns: 20vw 20vw 20vw 20vw; gap: 2vw; } 
+  .item {
+    width:20vw;
+  }
 
-  .item:nth-child(3) { transition-delay: 250ms; }
-  .item:nth-child(5) { transition-delay: 500ms; }
-  .item:nth-child(7) { transition-delay: 750ms; }
+.item:nth-child(3) { transition-delay: 250ms; }
+.item:nth-child(5) { transition-delay: 500ms; }
+.item:nth-child(7) { transition-delay: 750ms; }
+  .featuredImg {
+    width: 20vw;
+    height: 20vw;
+  }
+  .featuredText {
+    transition-delay: 500ms;
+  }
 
+/* try to get this to work */
   .featuredText:nth-child(2) { grid-area: 2 / 1; transition-delay:250ms; }
   .featuredText:nth-child(4) { grid-area: 2 / 2; transition-delay:500ms; }
   .featuredText:nth-child(6) { grid-area: 2 / 3; transition-delay:750ms; }
