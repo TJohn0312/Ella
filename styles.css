@@ -105,14 +105,11 @@ section:nth-child(1) {
 	margin: 20px;
 }
 
-@media screen and (min-width: 900px) {
-	.items {
-		grid-template-columns: 20vw 20vw 20vw 20vw;
-		gap: 2vw;
-	}
-	.item {
-		width: 20vw;
-	}
+@media screen and (min-width: 900px){
+  .items { grid-template-columns: 20vw 20vw 20vw 20vw; gap: 0 2vw; } 
+  .item { width:20vw; }
+  .featuredImg { width: 20vw; height: 20vw; }
+  .featuredText { height:130px ;transition-delay: 500ms; }
 
 	.item:nth-child(3) {
 		transition-delay: 250ms;
