@@ -1,3 +1,10 @@
+
+:root {
+  --background: #131316;
+  --accent: #282a35;
+  --footer:#ffffff;
+}
+
 body {
 	color: #ffffff;
 	padding: 0;
@@ -6,7 +13,7 @@ body {
 }
 
 section {
-	background-color: #131316;
+	background-color: var(--background);
 	display: grid;
 	place-items: center;
 	align-content: center;
@@ -35,6 +42,12 @@ section:nth-child(1) {
 	opacity: 1;
 	filter: blur(0);
 	transform: translateX(0);
+}
+
+.flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .paralax {
@@ -75,11 +88,6 @@ section:nth-child(1) {
 	grid-template-columns: 65vw;
 }
 
-.item {
-	width: 65vw;
-	height: auto;
-}
-
 .featuredImg {
 	border-radius: 25px 25px 0 0;
 	width: 65vw;
@@ -88,18 +96,10 @@ section:nth-child(1) {
 
 .featuredText {
 	margin-bottom: 35px;
-	background-color: #282a35;
+	background-color: var(--accent);
 	border-radius: 0 0 25px 25px;
 	height: 32vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
-
-.featuredText .hidden {
-	transition: all 4s;
-}
-/* .featurturedText:nth-child(n) { transition-delay: 150ms; } */
 
 .featuredText p {
 	margin: 20px;
@@ -108,25 +108,16 @@ section:nth-child(1) {
 @media screen and (min-width: 900px){
   .items { grid-template-columns: 20vw 20vw 20vw 20vw; gap: 0 2vw; } 
   .item { width:20vw; }
+
+	.item:nth-child(3) { transition-delay: 250ms; }
+	.item:nth-child(5) { transition-delay: 500ms; }
+	.item:nth-child(7) { transition-delay: 750ms; }
+
   .featuredImg { width: 20vw; height: 20vw; }
   .featuredText { height:130px ;transition-delay: 500ms; }
 
-	.item:nth-child(3) {
-		transition-delay: 250ms;
-	}
-	.item:nth-child(5) {
-		transition-delay: 500ms;
-	}
-	.item:nth-child(7) {
-		transition-delay: 750ms;
-	}
-	.featuredImg {
-		width: 20vw;
-		height: 20vw;
-	}
-	.featuredText {
-		transition-delay: 500ms;
-	}
+	.featuredImg { width: 20vw; height: 20vw; }
+	.featuredText { transition-delay: 500ms; }
 
   .featuredText:nth-child(2) { grid-area: 2 / 1; transition-delay:250ms; }
   .featuredText:nth-child(4) { grid-area: 2 / 2; transition-delay:500ms; }
@@ -136,18 +127,17 @@ section:nth-child(1) {
 
 .contact {
 	grid-template-rows: 33.3vh 10vh 33.3vh;
-	align-content: center;
 }
 
 .contactInfo {
-  background-color: #282a35; 
+  background-color: var(--accent); 
   border-radius: 25px 25px;
   padding: 15px;
   grid-area: 1/1;
 }
 
 .commonQandA {
-  background-color: #282a35; 
+  background-color: var(--accent); 
   border-radius: 25px 25px;
   padding: 15px;
   grid-area: 3/1;
@@ -158,16 +148,12 @@ section:nth-child(1) {
 		grid-template-columns: 33.3vw 33.3vw 33.3vw;
 		grid-template-rows: 33.3vh 33.3vh 33.3vh;
 	}
-	.contactInfo {
-		margin-left: 2vw;
-	}
-	.commonQandA {
-		grid-area: 2/3;
-	}
+	.contactInfo { margin-left: 2vw; }
+	.commonQandA { grid-area: 2/3; }
 }
 
 .footer {
 	min-height: 30vh;
-	background-color: white;
+	background-color: var(--footer);
 	color: black;
 }
